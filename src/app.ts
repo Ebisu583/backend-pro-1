@@ -1,6 +1,7 @@
 // import express from 'express';
 
 import inquirer from 'inquirer';
+import { PromptResult } from './interfaces';
 
 // const app = express();
 // const port = 3000;
@@ -16,7 +17,7 @@ const startApp = async (): Promise <void> => {
   };
   
   do {
-    const result: any = await inquirer.prompt([{
+    const result: PromptResult = await inquirer.prompt([{
         name: 'number',
         type: 'input',
         message: 'Podaj liczbę...'
